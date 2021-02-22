@@ -18,10 +18,10 @@ def getDate():
     server = "whois.internic.net"
     request = input("Enter a .com domain: ")
 
-    if "http://" in request:
-        request = request.replace("http://","")
     if "www." in request:
         request = request.replace("www.","")
+    if "http://" in request:
+        request = request.replace("http://","")
 
     print("Domain expiration date: " + doSearch(server, request))
 
